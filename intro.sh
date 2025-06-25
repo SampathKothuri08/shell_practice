@@ -34,4 +34,5 @@ series=("modern family" "friends" "stranger things")
 
 echo "First series : ${series[0]}"
 
+echo "second favorite series : ${series[1]}"
 echo "All the series that's on the list : ${series[@]}"
