@@ -12,8 +12,8 @@ echo "$person2 : hello there! just gearing up for my exam"
 
 echo "$person1 : Enter your student id here"
 
-read -s "Student ID"
+read -s "Student_ID"
 
-echo "$person2's student ID is ${Student ID}"
+echo "$person2's student ID is $Student_ID"
 
 
