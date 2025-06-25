@@ -25,10 +25,6 @@ sum=$((number1 + number2))
 echo "sum of $number1 and $number2 is $sum"
 
 
-TIMESTAMP=$(date)
-
-echo "This conversation ended at : $TIMESTAMP"
-
 
 series=("modern family" "friends" "stranger things")
 
@@ -36,3 +32,7 @@ echo "First series : ${series[0]}"
 
 echo "second favorite series : ${series[1]}"
 echo "All the series that's on the list : ${series[@]}"
+
+TIMESTAMP=$(date)
+
+echo "This conversation ended at : $TIMESTAMP"
