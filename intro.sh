@@ -2,10 +2,12 @@
 
 echo "Hello world"
 
-person1=phil
-person2="jay pritchett"
+person1=$1
+person2=$2
 
 
-echo "$person1 : Hey jay, how's it going ?"
+echo "$person1 : Hey, how's it going ?"
 
-echo "$person2 : hey phil, just gearing up for my exam"
+echo "$person2 : hello there! just gearing up for my exam"
+
+
