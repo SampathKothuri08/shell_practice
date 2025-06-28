@@ -7,6 +7,7 @@ then
     echo "You're running the commands with the root access"
 else
     echo "You need root access to install any packages"
+    exit 90
 fi
 
 
