@@ -12,7 +12,7 @@ fi
 
 dnf install nginx -y
 
-if [ $? -ne 0 ]
+if [ $? -eq 0 ]
 then
     echo "Nginx is installed successfully"
 else
