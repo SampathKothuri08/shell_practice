@@ -1,0 +1,14 @@
+#!/bin/bash
+
+USER_ID = $(id -u)
+
+if [ $USER_ID -ne 0 ]
+then
+    echo "Please run the script with the root access"
+else
+    echo "You're running with the root access"
+fi
+
+dnf install nginx -y
+
+
