@@ -79,6 +79,7 @@ validate() {
             echo "$2 is installed"
         else
             echo "Failed to install $2"
+            exit 90
         fi
     fi
 }
