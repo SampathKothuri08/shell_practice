@@ -10,12 +10,22 @@ else
     echo "You're running with the root access"
 fi
 
-dnf install nginx -y
+dnf list installed | grep nginx 
 
 if [ $? -eq 0 ]
 then
-    echo "Nginx is installed successfully"
+    echo "Nginx is already installed on your server"
 else
-    echo "Failed to install nginx"
+    echo "Nginx is unavailable on your server"
+    dnf install nginx -y
+
+    if [ $? -eq 0 ]
+    then
+        echo "Nginx is installed successfully"
+    else
+        echo "Failed to install the Nginx"
+    fi
 fi
+
+    
 
