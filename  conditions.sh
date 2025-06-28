@@ -3,7 +3,7 @@
 number1=$1
 
 
-if [ number1 -lt 10 ]
+if [ $number1 -lt 10 ]
 then
     echo "The number $number1 is less than 10"
 else
