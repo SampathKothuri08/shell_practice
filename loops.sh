@@ -4,7 +4,7 @@
 # do
 #     echo $i
 # done
-PACKAGES=("nginx" "mysql" "python3" "htop")
+# PACKAGES=("nginx" "mysql" "python3" "htop")
 USER_ID=$(id -u)
 
 R="\e[31m"
@@ -52,7 +52,7 @@ validate(){
 
 
 
-for package in ${PACKAGES[@]}
+for package in $@
 do
     dnf list installed $package &>> $LOG_FILE
     validate "$?" "$package"
