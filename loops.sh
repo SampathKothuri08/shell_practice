@@ -25,10 +25,10 @@ echo -e "$C script started executing at : $(date) $N" | tee -a $LOG_FILE
 
 if [ $USER_ID -ne 0 ]
 then
-    echo -e "$RError: You need the Root access to run the script $N" | tee -a $LOG_FILE
+    echo -e "$R Error: You need the Root access to run the script $N" | tee -a $LOG_FILE
     exit 90
 else
-    echo -e "$GYou've the Root access to run the script $N" | tee -a $LOG_FILE
+    echo -e "$G You've the Root access to run the script $N" | tee -a $LOG_FILE
 fi
 
 
@@ -42,10 +42,10 @@ validate(){
         then
             echo -e "$G$2 is installed successfully $N" | tee -a $LOG_FILE
         else
-            echo -e "$RFailed to install $2$N" | tee -a $LOG_FILE
+            echo -e "$R Failed to install $2$N" | tee -a $LOG_FILE
         fi
     else
-        echo -e "$Y$2 is already installed on your server$N" | tee -a $LOG_FILE
+        echo -e "$Y$2 is already installed on your server $N" | tee -a $LOG_FILE
     fi
 }
 
