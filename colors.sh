@@ -15,7 +15,7 @@ N="\e[0m"
 
 USER_ID=$(id -u)
 
-if [ USER_ID -ne 0 ]
+if [ $USER_ID -ne 0 ]
 then
     echo -e "$R Error: You need root access to run this script $N"
     exit 90
@@ -33,7 +33,7 @@ Validate(){
         echo -e "$Y$2 is unavailable on your server, let's install it $N"
         dnf install $2 -y
 
-        if [ $1 -ne 0]
+        if [ $1 -ne 0 ]
         then
             echo -e "$R Error: Failed to install $2 $N"
         else
