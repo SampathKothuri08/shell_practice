@@ -16,7 +16,7 @@ N="\e[0m"
 USER_ID=$(id -u)
 
 if [ USER_ID -ne 0 ]
-then:
+then
     echo -e "$R Error: You need root access to run this script $N"
     exit 90
 else
