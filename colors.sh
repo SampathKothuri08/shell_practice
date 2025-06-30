@@ -33,7 +33,7 @@ Validate(){
         echo -e "$Y$2 is unavailable on your server, let's install it $N"
         dnf install $2 -y
 
-        if [ $1 -ne 0 ]
+        if [ $? -ne 0 ]
         then
             echo -e "$R Error: Failed to install $2 $N"
         else
