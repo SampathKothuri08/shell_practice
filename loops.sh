@@ -31,11 +31,6 @@ else
     echo -e $G"You've the Root access to run the script $N" | tee -a $LOG_FILE
 fi
 
-for package in ${PACKAGES[@]}
-do
-    dnf list installed $package &>> $LOG_FILE
-    validate "$?" "$package"
-done
 
 validate(){
     if [ $1 -ne 0 ]
@@ -53,3 +48,13 @@ validate(){
         echo "$Y$2 is already installed on your server$N" | tee -a $LOG_FILE
     fi
 }
+
+
+
+
+for package in ${PACKAGES[@]}
+do
+    dnf list installed $package &>> $LOG_FILE
+    validate "$?" "$package"
+done
+
