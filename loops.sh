@@ -34,7 +34,7 @@ fi
 for package in ${PACKAGES[@]}
 do
     dnf list installed $package &>> $LOG_FILE
-    validate() "$?" "$package"
+    validate "$?" "$package"
 done
 
 validate(){
