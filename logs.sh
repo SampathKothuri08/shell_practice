@@ -35,7 +35,7 @@ Validate(){
         echo -e "$Y$2 is already installed on your server $N" &>> $LOG_FILE
     else
         echo -e "$Y$2 is unavailable on your server, let's install it $N" &>> $LOG_FILE
-        dnf install $2 -y
+        dnf install $2 -y &>> $LOG_FILE
 
         if [ $? -ne 0 ]
         then
@@ -47,15 +47,15 @@ Validate(){
 
 }
 
-dnf list installed nginx
+dnf list installed nginx &>> $LOG_FILE
 
 Validate "$?" "nginx"
 
 
-dnf list installed mysql
+dnf list installed mysql &>> $LOG_FILE
 Validate $? "mysql"
 
 
-dnf list installed python3
+dnf list installed python3 &>> $LOG_FILE
 Validate $? "python3"
 
