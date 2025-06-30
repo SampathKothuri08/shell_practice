@@ -16,11 +16,11 @@ C="\e[37m"
 
 LOGS_FOLDER="/var/log/shellscript-logs"
 SCRIPT_NAME=$(echo "$0" | cut -d "." -f1)
-LOG_FILE="/$LOGS_FOLDER/$SCRIPT_NAME.log"
+LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
 
 mkdir -p $LOGS_FOLDER
 
-echo "$C script started executing at : $(date) $N" | tee -a $LOG_FILE
+echo -e "$C script started executing at : $(date) $N" | tee -a $LOG_FILE
 
 
 if [ $USER_ID -ne 0 ]
