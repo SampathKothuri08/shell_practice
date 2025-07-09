@@ -8,3 +8,4 @@ Var=Ritz
 
 ./script2.sh
 echo "$Var goes to college in the morning"
+echo "$person is a good lad"
