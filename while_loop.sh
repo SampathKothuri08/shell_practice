@@ -10,5 +10,5 @@
 
 while IFS= read -r line
 do
-    echo "$line"
+    echo $line
 done < sets.sh
