@@ -1,9 +1,14 @@
 #!/bin/bash
 
-a=0
+# a=0
 
-while [ $a -lt 5 ]
+# while [ $a -lt 5 ]
+# do
+#     echo $a
+#     a=$(($a+1))
+# done
+
+while IFS= read -r line
 do
-    echo $a
-    a=$(($a+1))
-done
+    echo "$line"
+done < sets.sh
