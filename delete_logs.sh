@@ -9,7 +9,7 @@ USER_ID=$(id -u)
 LOGS_FOLDER="/var/log/deleted-logs"
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
-SOURCE_DIR="/home/ec2-user/app-logs"
+SOURCE_DIR="/home/ec2-user/app_logs"
 
 if [ $USER_ID -ne 0 ]
 then
@@ -38,8 +38,11 @@ FILES=$(find $SOURCE_DIR -name "*.log" -mtime +14) &>> $LOG_FILE
 
 
 
+
 while IFS= read -r file_path
 do
     rm -rf $file_path
 
 done <<< $FILES
+
+echo -e "${Y}Script executed successfully ${N}" | tee -a $LOG_FILE
