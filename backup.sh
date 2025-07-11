@@ -6,7 +6,7 @@ Y="\e[33m"
 N="\e[0m"
 
 USER_ID=$(id -u)
-LOGS_FOLDER="/var/log/deleted-logs"
+LOGS_FOLDER="/var/log/backup-logs"
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
 SOURCE_DIR="$1"
@@ -68,7 +68,7 @@ Validate $? "Installed zip function"
 
 FILES=$(find $SOURCE_DIR -name "*.log" -mtime +14) 
 
-if [ ! -z $FILES ]
+if [ ! -z "$FILES" ]
 then
     echo "Files to be zipped are : $FILES" | tee -a $LOG_FILE
     TIMESTAMP=$(date +%F-%H-%M-%S)
