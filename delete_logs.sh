@@ -33,7 +33,7 @@ Validate(){
 mkdir -p $LOGS_FOLDER
 
 echo -e "${Y}Script started executing at $(date) ${N}" | tee -a $LOG_FILE
-FILES=$(find $SOURCE_DIR -name "*.log" -mtime +14) &>> $LOG_FILE
+FILES=$(find $SOURCE_DIR -name "*.log" -mtime +14) 
 
 
 
