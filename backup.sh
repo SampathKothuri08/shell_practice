@@ -7,7 +7,11 @@ N="\e[0m"
 
 USER_ID=$(id -u)
 LOGS_FOLDER="/var/log/backup-logs"
-SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
+# SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
+
+#using basename for crontab
+SCRIPT_NAME=$(basename "$0" | cut -d "." -f1) 
+
 LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
 SOURCE_DIR="$1"
 DEST_DIR="$2"
