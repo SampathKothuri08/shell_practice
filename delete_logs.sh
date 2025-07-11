@@ -9,7 +9,7 @@ USER_ID=$(id -u)
 LOGS_FOLDER="/var/log/deleted-logs"
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
-SOURCE_DIR="/home/ec-user/app-logs"
+SOURCE_DIR="/home/ec2-user/app-logs"
 
 if [ $USER_ID -ne 0 ]
 then
